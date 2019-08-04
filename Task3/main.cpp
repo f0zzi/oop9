@@ -10,7 +10,6 @@ int main(int argc, char* argv[])
 {
 	string command, filename1, filename2;
 	char symbol;
-	//enum commands { create, print, append, copy, filterDigits };
 	cout << "Microsoft Windows [Version 10.0.18362.267]" << endl;
 	cout << "(c)Microsoft Corporation, 2019. All rights reserved." << endl;
 	while (true)
