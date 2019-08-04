@@ -400,7 +400,7 @@ public:
 			int age, size;
 			cout << "Enter file name: ";
 			cin >> filename;
-			filename.append(".dat");
+			//filename.append(".dat");
 			ofstream f_out(filename, ios::out | ios::binary);
 			if (f_out.is_open())
 			{
@@ -429,13 +429,10 @@ public:
 			}
 			else
 				cout << "Error opening file." << endl;
-			system("pause");
 		}
 		else
-		{
 			cout << "Nothing to save. Your zoo is empty." << endl;
-			system("pause");
-		}
+		system("pause");
 	}
 	void LoadZoo()
 	{
@@ -445,7 +442,7 @@ public:
 		char* tmp = nullptr;
 		cout << "Enter file name: ";
 		cin >> filename;
-		filename.append(".dat");
+		//filename.append(".dat");
 		ifstream f_in(filename, ios::in | ios::binary);
 		if (f_in.is_open())
 		{
@@ -481,12 +478,11 @@ public:
 					zoo.push_back(new Hamster(name, age, breed));
 			}
 			f_in.close();
+			cout << "Success. Zoo is loaded." << endl;
 		}
 		else
-		{
 			cout << "Error opening file." << endl;
-			system("pause");
-		}
+		system("pause");
 	}
 };
 string GetData(ifstream* f_in)
